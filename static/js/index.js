@@ -1,7 +1,6 @@
 var socket = io()
 
 socket.on('connect', function() {
-
   var name = prompt("이름을 적어주세요");
   if(!name){
     name = '익명';
@@ -16,10 +15,7 @@ socket.on('update', function(data) {
 
   var message = document.createElement('div')
   var node = document.createTextNode(`${data.name}: ${data.message}`)
-  var className = ''
-  var ID1 = document.getElementById('connp');
-  var pnode = document.createElement("<div class="{data.name}"></div>")
-  var ptextnode = document.createTextNode(`${data.name}`);
+  var className = '';
   switch(data.type) {
     case 'message':
       className = 'other'
