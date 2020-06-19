@@ -36,15 +36,16 @@ socket.on('update', function(data) {
   message.appendChild(node)
   chat.appendChild(message)
 
-  var divdiv = document.getElementById("chat");
-  divdiv.scrollTop = divdiv.scrollHeight;
   if(className== 'connect'){
-      total=total+1;
+    total=total+1;
   }
   if(className== 'disconnect'){
-    total=total-1;
+  total=total-1;
+
+  var divdiv = document.getElementById("chat");
+  divdiv.scrollTop = divdiv.scrollHeight;
   }
-})
+}
 
 function value_test(){
   var message = document.getElementById('test').value
