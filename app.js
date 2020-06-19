@@ -37,7 +37,7 @@ io.sockets.on('connection', function(socket) {
 
     socket.name = name
 
-    io.sockets.emit('update', {type: 'connect', name: 'SERVER', message: name + '님이 접속하였습니다.'})
+    io.sockets.emit('update', {type: 'connect', name: 'SERVER', message: name + '님이 접속하였습니다1.'})
   })
 
   socket.on('message', function(data) {
