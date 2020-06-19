@@ -3,6 +3,9 @@ var socket = io()
 socket.on('connect', function() {
 
   var name = prompt("이름을 적어주세요");
+  if(!name){
+    name=unkown;
+  }
 
   socket.emit('newUser', name)
 })
@@ -14,9 +17,6 @@ socket.on('update', function(data) {
   var message = document.createElement('div')
   var node = document.createTextNode(`${data.name}: ${data.message}`)
   var className = ''
-  var ID1 = document.getElementById('connp');
-  var pnode = document.createElement("<div class="{data.name}"></div>");
-  var ptextnode = document.createTextNode(`${data.name}`);
   switch(data.type) {
     case 'message':
       className = 'other'
@@ -38,18 +38,6 @@ socket.on('update', function(data) {
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
 
-  if(data.type=='connect'){
-    node.appendChild(ptextnode);
-    ID1.appendChild(pnode);
-  };
-  if(data.type=='disconnect'){
-    var header = document.querySelector("h1");	//제거하고자 하는 엘리먼트
-    var body = document.body;	// 그 엘리먼트의 부모 객체
-    body.removeChild(header);
-    var header = document.querySelector("h1");	//제거하고자 하는 엘리먼트
-    header.parentNode.removeChild(header);
-  };
-
 })
 
 function value_test(){
@@ -58,11 +46,10 @@ function value_test(){
   if((message == "")||(message == null)){
    document.getElementById('test').value = ''
   }
-  if(message.length <= 150){
-    alert('글자는 150자까지 쓸 수 있습니다')
-  }else{
+  else{
     return logchk();
   }
+  if(me)
 }
 
 function logchk(){
