@@ -52,9 +52,6 @@ function value_test(){
   if((message == "")||(message == null)){
    document.getElementById('test').value = ''
   }
-  if(message.legth()<=150){
-    alert("글자수는 150자를 넘길 수 없습니다")
-  }
   else{
     return logchk();
   }
