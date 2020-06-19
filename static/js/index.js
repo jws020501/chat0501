@@ -2,7 +2,7 @@ var socket = io()
 
 socket.on('connect', function() {
 
-  var name = prompt("이름을 적어주세요",[익명]);
+  var name = prompt("이름을 적어주세요");
   if(!name) return name = "익명"
 
   socket.emit('newUser', name)

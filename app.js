@@ -57,7 +57,8 @@ io.sockets.on('connection', function(socket) {
     socket.broadcast.emit('update', {type: 'disconnect', name: 'SERVER', message: socket.name + '님이 나가셨습니다.'});
   })
 })
+var port = process.env.PORT||8080
 
-server.listen(process.env.PORT, function() {
+server.listen(port, function() {
   console.log('서버 실행 중..')
 })
