@@ -50,13 +50,13 @@ function value_test(){
 }
 
 function logchk(){
-  if(!name){
-    alert("메시지를 전송하려면 로그인")
-    document.getElementById('test').value = ''
-  }else{
-    return send();
+ /// if(!name){
+    ///alert("메시지를 전송하려면 로그인")
+   /// document.getElementById('test').value = ''
+  ///}else{
+  return send();
   }
-}
+
 
 function send() {
   var message = document.getElementById('test').value
