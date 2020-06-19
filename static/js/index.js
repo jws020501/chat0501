@@ -53,12 +53,12 @@ function value_test(){
    document.getElementById('test').value = ''
   }
   else{
-    return logchk();
+    return send();
   }
 }
 
 function logchk(){
-  if(!name){
+  if(name == null){
     alert("메시지를 전송하려면 로그인")
    document.getElementById('test').value = ''
   }else{
