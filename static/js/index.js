@@ -4,13 +4,12 @@ socket.on('connect', function() {
 
   var name = prompt("이름을 적어주세요");
   if(!name){
-    name=unkown;
+    name = '익명';
   }
 
   socket.emit('newUser', name)
 })
 
-var total = 0;
 
 socket.on('update', function(data) {
   var chat = document.getElementById('chat')
@@ -18,6 +17,9 @@ socket.on('update', function(data) {
   var message = document.createElement('div')
   var node = document.createTextNode(`${data.name}: ${data.message}`)
   var className = ''
+  var ID1 = document.getElementById('connp');
+  var pnode = document.createElement("<div class="{data.name}"></div>")
+  var ptextnode = document.createTextNode(`${data.name}`);
   switch(data.type) {
     case 'message':
       className = 'other'
@@ -36,16 +38,10 @@ socket.on('update', function(data) {
   message.appendChild(node)
   chat.appendChild(message)
 
-  if(className== 'connect'){
-    total=total+1;
-  }
-  if(className== 'disconnect'){
-  total=total-1;
-
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
-  }
-}
+
+})
 
 function value_test(){
   var message = document.getElementById('test').value
@@ -57,15 +53,6 @@ function value_test(){
     return send();
   }
 }
-
-function logchk(){
-  if(name == null){
-    alert("메시지를 전송하려면 로그인")
-   document.getElementById('test').value = ''
-  }else{
-  return send();
-  }
-
 
 function send() {
   var message = document.getElementById('test').value
@@ -88,4 +75,4 @@ function send() {
 }
 
 
-}
+
