@@ -1,0 +1,58 @@
+/* 메인 */
+#main {
+  margin-left: 35% ;
+  margin-top: 100px;
+  border-radius: 20px;
+  background-color: lightblue;
+  text-align: center;
+  width: 500px;
+  height: 800px;
+  float: left;
+}
+.loginside{
+  margin-top: 100px;
+  margin-right: 350px;
+  width: 250px;
+  float: right;
+  background-color:whitesmoke ;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid linen;
+
+}
+
+/* 채팅 영역 */
+#chat {
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+}
+.connect {
+  width: 90%;
+  margin: auto;
+  background-color: aquamarine;
+  text-align: center;
+  margin-top: 10px;
+}
+.disconnect {
+  width: 90%;
+  margin: auto;
+  background-color: indianred;
+  text-align: center;
+  margin-top: 10px;
+}
+.me {
+  width: 90%;
+  margin: auto;
+  background-color: lemonchiffon;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.other {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}

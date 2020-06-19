@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>채팅</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../logindb.js"></script>
+    <script src="/js/index.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="chat">
+      </div>
+      <div name="form1">
+        <input type="text" id="test" name="input1" placeholder="메시지를 입력해주세요.." onKeypress="javascript:if(event.keyCode==13) {value_test()}">
+        <button onclick="value_test()">전송</button>
+      </div>
+    </div>
+    <nav class="loginside">
+      <h3>로그인</h3>
+      <table>
+        <tr>
+          <td><input type="text" id="ID" value="" placeholder="로그인"></td>
+          <td rowspan="2"><button onclick="login()">로그인</button></td>
+        </tr>
+        <tr>
+          <td><input type="password" id="pw" value="" placeholder="비밀번호"></td>
+        </tr>
+      </table>
+      <a href="regster.html">회원가입</a>   <a href="findinfo.html">아이디.비밀번호찾기</a>
+    </nav>
+  </body>
+</html>

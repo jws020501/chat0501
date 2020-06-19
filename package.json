@@ -1,0 +1,23 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "asd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "feedparser": "^2.2.10",
+    "mysql": "^2.18.1",
+    "requirejs": "^2.3.6",
+    "sequelize": "^5.21.11",
+    "socket.io": "^2.3.0",
+    "urlencode": "^1.1.0"
+  }
+}
