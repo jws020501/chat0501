@@ -10,6 +10,7 @@ socket.on('connect', function() {
   socket.emit('newUser', name)
 })
 
+var total = 0;
 
 socket.on('update', function(data) {
   var chat = document.getElementById('chat')
@@ -37,7 +38,12 @@ socket.on('update', function(data) {
 
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
-
+  if(className== 'connect'){
+      total=total+1;
+  }
+  if(className== 'disconnect'){
+    total=total-1;
+  }
 })
 
 function value_test(){
@@ -46,10 +52,12 @@ function value_test(){
   if((message == "")||(message == null)){
    document.getElementById('test').value = ''
   }
+  if(message.legth()<=150){
+    alert("글자수는 150자를 넘길 수 없습니다")
+  }
   else{
     return logchk();
   }
-  if(me)
 }
 
 function logchk(){
