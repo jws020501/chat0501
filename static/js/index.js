@@ -45,11 +45,16 @@ function value_test(){
   if((message == "")||(message == null)){
    document.getElementById('test').value = ''
   }
+  else{
+    return length_test();
+  }
+}
+function length_test(){
   if(message.length() <= 150){
     alert("글자수는 150자를 넘을 수 없습니다")
   }
   else{
-    return send();
+    return send()
   }
 }
 
