@@ -51,7 +51,7 @@ function value_test(){
 }
 function length_test(){
   var message = document.getElementById('test').value
-  alert(message.value.length)
+  alert("message.value.length")
 
     return send()
 }
