@@ -51,9 +51,11 @@ function value_test(){
 }
 function length_test(){
   var message = document.getElementById('test').value
-  alert("message.value.length")
-
+  if(message.length >= 150){
+    alert('메시지는 150자까지만 쓸수 있습니다');
+  }else{
     return send()
+}
 }
 
 function send() {
