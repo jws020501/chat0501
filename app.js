@@ -60,5 +60,5 @@ io.sockets.on('connection', function(socket) {
 var port = process.env.PORT||8080
 
 server.listen(port, function() {
-  console.log('서버 실행 중..')
+  console.log('http://localhost:',port)
 })
