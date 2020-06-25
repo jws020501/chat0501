@@ -1,5 +1,4 @@
 var socket = io()
-var client_list = new Array;
 
 socket.on('connect', function() {
   var name = prompt("이름을 적어주세요");
@@ -8,13 +7,10 @@ socket.on('connect', function() {
   }
   socket.emit('newUser', name)
 })
-socket.on('update', function (data) {
+socket.on('update', function cli(data) {
   var chat = document.getElementById('chat')
   var message = document.createElement('div')
   var node = document.createTextNode(`${data.name}: ${data.message}`)
-  if(name=='ㅇㅅㅈ'){
-    node=document.createTextNode(`ㅇㅅㅈ: 이서진바보`);
-  }
   var className = '';
   switch(data.type) {
     case 'message':
@@ -39,16 +35,15 @@ socket.on('update', function (data) {
 
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
+
+  return client_list;
 })
 
 function cli_list(){
-  
-  for(var i=0;i<client_list.length;i++){
-    var str3 = new String;
-    str3 += cli_list[i]+'\n';
-  }
 
-  alert("접속자 리스트\n"+str3)
+  var value = client_list.join('\n');
+
+  alert("접속자 리스트\n"+value)
 
 }
 
