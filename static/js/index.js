@@ -30,20 +30,18 @@ socket.on('update', function cli(data) {
   message.appendChild(node)
   chat.appendChild(message)
 
-  
+  if(data.type == connect || data.type == disconnect){
   client_list = data.list;
+  }
 
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
-
-  return client_list;
 })
 
 function cli_list(){
-
+  var v
   var value = client_list.join('\n');
-
-  alert("접속자 리스트\n"+value)
+  alert("접속자 리스트\n\n"+value)
 
 }
 
@@ -60,7 +58,7 @@ function value_test(){
 function length_test(){
   var message = document.getElementById('test').value
   if(message.length >= 150){
-    alert('메시지는 150자까지만 쓸수 있습니다');
+    alert('메시지는 150자까지만 쓸 수 있습니다');
   }else{
     return send()
 }
