@@ -30,16 +30,13 @@ socket.on('update', function cli(data) {
   message.appendChild(node)
   chat.appendChild(message)
 
-  if(data.type == connect || data.type == disconnect){
   client_list = data.list;
-  }
 
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
 })
 
 function cli_list(){
-  var v
   var value = client_list.join('\n');
   alert("접속자 리스트\n\n"+value)
 
