@@ -30,10 +30,13 @@ socket.on('update', function cli(data) {
   message.appendChild(node)
   chat.appendChild(message)
 
-  client_list = data.list;
-
   var divdiv = document.getElementById("chat");
   divdiv.scrollTop = divdiv.scrollHeight;
+
+  if(data.type == 'connect' || data.type =='disconnect'){
+    client_list = data.list;
+  }
+
 })
 
 function cli_list(){
