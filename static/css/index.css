@@ -1,4 +1,4 @@
-/* 메인 */
+
 #main {
   margin-left: 35% ;
   margin-top: 100px;
@@ -9,7 +9,9 @@
   height: 800px;
   float: left;
 }
-.connperson{
+#connp{
+  width: 35%;
+  height: 45%;
   margin-top: 100px;
   margin-right: 5%;
   width: 250px;
@@ -18,15 +20,17 @@
   padding-left: 15px;
   padding-bottom: 5px;
   border-radius: 20px;
-  border: 1px solid linen;
+  border: 1px solid  lightblue;
 
 }
-.connperson h4{
+#connp h3{
   text-align: center;
 }
+#connp input{
+  display : block;
+  margin : 0 auto;
+}
 
-
-/* 채팅 영역 */
 #chat {
   height: 90%;
   width: 100%;

@@ -5,7 +5,6 @@
     <title>채팅</title>
     <link rel="stylesheet" href="/css/index.css">
     <script src="/socket.io/socket.io.js"></script>
-    <script src="../logindb.js"></script>
     <script src="/js/index.js"></script>
   </head>
   <body>
@@ -17,8 +16,9 @@
         <button onclick="value_test()">전송</button>
       </div>
     </div>
-    <nav id="connp">
-      <h4>접속자 수</h4>
-    </nav>
+    <div id="connp">
+      <h3>접속자</h3>
+      <input type="button" id="client_list" value="접속자 보기" onclick="cli_list()">
+    </div>
   </body>
 </html>
