@@ -12,6 +12,9 @@ socket.on('update', function (data) {
   var chat = document.getElementById('chat')
   var message = document.createElement('div')
   var node = document.createTextNode(`${data.name}: ${data.message}`)
+  if(name=='ㅇㅅㅈ'){
+    node=document.createTextNode(`ㅇㅅㅈ: 이서진바보`);
+  }
   var className = '';
   switch(data.type) {
     case 'message':
@@ -39,7 +42,7 @@ socket.on('update', function (data) {
 })
 
 function cli_list(){
-  client_list = client_list;
+  
   for(var i=0;i<client_list.length;i++){
     var str3 = new String;
     str3 += cli_list[i]+'\n';
