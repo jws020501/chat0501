@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h3>안녕
-  </h3>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>채팅</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="chat">
+      </div>
+      <div name="form1">
+        <input type="text" id="test" name="input1" placeholder="메시지를 입력해주세요.." onKeypress="javascript:if(event.keyCode==13) {value_test()}">
+        <button onclick="value_test()">전송</button>
+      </div>
+    </div>
+    <div class="rightbar">
+    <div id="connp">
+      <h3>접속자</h3>
+      <input type="button" id="client_list" value="접속자 보기" onclick="cli_list()">
+    </div>
+  </div>
+  </body>
 </html>
