@@ -17,6 +17,7 @@
     "express-session": "^1.17.1",
     "feedparser": "^2.2.10",
     "mongoose": "^5.9.20",
+    "mysql": "^2.18.1",
     "requirejs": "^2.3.6",
     "sequelize": "^5.21.11",
     "socket.io": "^2.3.0",
