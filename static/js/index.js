@@ -1,4 +1,5 @@
 var socket = io()
+var client_list = [];
 
 socket.on('connect', function() {
   var name = prompt("이름을 적어주세요");

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원가입</title>
+    <script src="./js/register.js"></script>
+</head>
+<body>
+    <div class="registermain">
+        <table>
+            <tr>
+                <td><input id="id" type="text" placeholder="아이디를 입력하세요"></td>
+                <td><input type="button" value="아이디 중복검사" onclick="idcheck()"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="pw" type="password" placeholder="패스워드를 입력하세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="repw" type="password" placeholder="패스워드를 다시 입력하세요" ></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="name" type="text" placeholder="이름을 입력하세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="email" type="text" placeholder="이메일을 입력하세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="pn" type="text" placeholder="전화번호를를 입력하세요"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="가입완료" onclick="regcomplite()"></td>
+                <td><input type="button" value="리셋" onclick="regreset()"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

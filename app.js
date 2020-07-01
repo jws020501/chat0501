@@ -5,6 +5,8 @@ const socket = require('socket.io')
 
 const http = require('http')
 
+const mongoose =require('mongoose')
+
 const fs = require('fs')
 
 const app = express()
@@ -13,24 +15,18 @@ const server = http.createServer(app)
 
 const io = socket(server)
 
+const router = require('./router/router');
 
 app.use('/css', express.static('./static/css'))
 app.use('/js', express.static('./static/js'))
+app.use('/',router);
 
-app.get('/', function(request, response) {
-  fs.readFile('./static/index.html', function(err, data) {
-    if(err) {
-      response.send('에러')
-    } else {
-      response.writeHead(200, {'Content-Type':'text/html'})
-      response.write(data)
-      response.end()
-    }
-  })
-})
+
+
 var client_list=new Array;
+
 io.sockets.on('connection',function(socket){
-  
+
   socket.on('newUser', function(name) {
     console.log(name + ' 님이 접속하였습니다.')
     socket.name = name;
